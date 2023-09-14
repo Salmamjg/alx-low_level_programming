@@ -1,22 +1,19 @@
 #include "main.h"
 
-/**
- * print_line - draws a straight line in the terminal
- * @n: number of times the character _ should be printed
- */
-
-void print_line(int n)
-{
-int chr;
-    
-if (n <= 0)
-_putchar('\n');
-else
-{
-for (chr = 1; chr <= n; chr++)
-{
-_putchar(95);
-}
-_putchar('\n');
-}
-}
+/** 
+ * print_line - function that prints 10 times the numbers, from 0 to 14. 
+ * The line should end with a \n. 
+ * @n: para checked 
+ * Return: void. 
+ */ 
+ #include "main.h" 
+ void print_line(int n) 
+ { 
+ int i = 0; 
+ while (i < n) 
+ { 
+ _putchar(95); 
+ i++; 
+ } 
+ _putchar('\n'); 
+ }
