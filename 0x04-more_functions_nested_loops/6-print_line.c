@@ -16,6 +16,6 @@ for (chr = 1; chr <= n; chr++)
 {
 _putchar('_');
 }
-_putchar('\n');
 }
+_putchar('\n');
 }
