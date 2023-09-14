@@ -6,19 +6,13 @@
  */
 void print_line(int n)
 {
-if (n <= 0)
-{
+int chr;
+if(n <= 0)
 _putchar('\n');
-}
 else
-{    
-int i;
-
-for (i = 1; i <= n; i++)
 {
-_putchar('_');  
-}
-
-_putchar('\n'); 
+for (chr = 1; chr <= n; chr++)
+_putchar('_');
+_putchar('\n');
 }
 }
