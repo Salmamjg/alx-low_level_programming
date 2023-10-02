@@ -1,11 +1,21 @@
-#include <string.h>
+#include "main.h"
+#include <stddef.h>
 
-unsigned int _strspn(char *s, char *accept)
+/**
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
+ */
+char *_strchr(char *s, char c)
 {
-    unsigned int count = 0;
-    while (*s && strchr(accept, *s)) {
-        count++;
-        s++;
-    }
-    return count;
+	int i = 0;
+
+	for (; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (&s[i]);
+	}
+	return (0);
 }
+
