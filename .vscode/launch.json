@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x07-pointers_arrays_strings",
-      "program": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x07-pointers_arrays_strings/build/Debug/outDebug",
+      "cwd": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x09-static_libraries",
+      "program": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x09-static_libraries/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
