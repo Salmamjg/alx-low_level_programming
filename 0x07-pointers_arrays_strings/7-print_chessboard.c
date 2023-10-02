@@ -3,18 +3,20 @@
 
 /**
  * print_chessboard - Print a chessboard.
- * @board: The 8x8 chessboard represented as a 2D character array.
+ * @a: The 8x8 chessboard represented as a 2D character array.
+ *
+ * Return: void
  */
-void print_chessboard(char (*board)[8]) {
-    int i, j;
+void print_chessboard(char (*a)[8])
+{
+	int i, j;
 
-    for (i = 0; i < 8; i++) {
-        for (j = 0; j < 8; j++) {
-            putchar(board[i][j]);
-            if (j < 7) {
-                putchar(' ');
-            }
-        }
-        putchar('\n');
-     }
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			putchar(a[i][j]);
+		}
+		putchar('\n');
+	}
 }
