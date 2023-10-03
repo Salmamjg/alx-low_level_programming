@@ -33,8 +33,9 @@ char *argstostr(int ac, char **av)
 	}
 	if (acc[k] == '\0')
 	{
-		acc[j++] = '\n';
+		acc[k++] = '\n';
 	}
 	}
 	return (acc);
 }
+
