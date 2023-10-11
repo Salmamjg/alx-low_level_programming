@@ -73,14 +73,14 @@ dog_t *new_dog(char *name, float age, char *owner)
     dog->name = malloc(sizeof(char) * (len1 + 1));
     if (dog->name == NULL)
     {
-        free(dog);  /* Free the 'dog' struct itself */
+        free(dog); 
         return (NULL);
     }
     dog->owner = malloc(sizeof(char) * (len2 + 1));
     if (dog->owner == NULL)
     {
-        free(dog->name);  /* Free 'name' if 'owner' allocation fails */
-        free(dog);        /* Free 'dog' struct itself */
+        free(dog->name); 
+        free(dog);       
         return (NULL);
     }
 
