@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x0C-more_malloc_free",
-      "program": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x0C-more_malloc_free/build/Debug/outDebug",
+      "cwd": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x0E-structures_typedef",
+      "program": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x0E-structures_typedef/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
