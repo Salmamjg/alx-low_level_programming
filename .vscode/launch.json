@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x10-variadic_functions",
-      "program": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x10-variadic_functions/build/Debug/outDebug",
+      "cwd": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x12-singly_linked_lists",
+      "program": "c:/Users/user/OneDrive/Bureau/alx/alx-low_level_programming/0x12-singly_linked_lists/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
