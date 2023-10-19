@@ -10,20 +10,17 @@
 
 size_t print_list(const list_t *h){
        size_t count = 0;
-       list_t *ptr = (list_t *)h;
 
-       if(h == NULL){
-        printf("Linked List is empty");
-        return count;
-       }
-    
-      while (ptr != NULL){
-        printf("%s\n", ptr->str);
-        ptr = ptr->next;
-        count++;
+      while (h != NULL){
+          if(h->str == NULL){
+            printf("[0] (nil)\n");
+          } else {
+             printf("[%d] %s\n",h->len,h->str);
+          }
+      h = h->next;
+      count++;
       }
-
-      printf("\n");
+  
       return count;
 
 }
