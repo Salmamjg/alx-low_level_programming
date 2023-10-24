@@ -16,4 +16,5 @@ c = *head;
 free(c);
 }
 *head = NULL;
+printf("(nil)\n");
 }
