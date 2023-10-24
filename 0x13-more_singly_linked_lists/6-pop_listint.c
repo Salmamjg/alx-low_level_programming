@@ -3,7 +3,7 @@
 /**
  * pop_listint - deletes the head node of the listint_t linked list
  * @head: double pointer to the listint_t list
- * 
+ *
  * Return: the data n of the deleted head node,or 0 if the list is empty
 */
 
@@ -14,7 +14,7 @@ int data;
 
 if (*head == NULL)
 {
-return 0;
+return (0);
 }
 c = *head;
 data = c->n;
