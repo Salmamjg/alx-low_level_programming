@@ -16,5 +16,5 @@ while (h != NULL)
 h = h->next;
 c++;
 }
-return(c);
+return (c);
 }
