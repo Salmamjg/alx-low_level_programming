@@ -20,7 +20,8 @@ updated_node_end->next = NULL;
 if (*head == NULL)
 {
 *head = updated_node_end;
-}else
+} 
+else
 {
 listint_t *c = *head;
 while (c->next != NULL)
