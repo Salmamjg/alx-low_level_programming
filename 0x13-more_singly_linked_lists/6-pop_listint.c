@@ -20,5 +20,5 @@ c = *head;
 data = c->n;
 *head = c->next;
 free(c);
-return data;
+return (data);
 }
