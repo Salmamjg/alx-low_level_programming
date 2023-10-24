@@ -3,7 +3,7 @@
 /**
  * sum_listint - returns the sum of the data n of listint_t list
  * @head: pointer to the head of the list
- * 
+ *
  * Return: sum of the data n of listint_t list,0 if the list is empty
 */
 
@@ -16,5 +16,5 @@ while (head != NULL)
 total += head->n;
 head = head->next;
 }
-return total;
+return (total);
 }
