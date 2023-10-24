@@ -13,7 +13,7 @@ listint_t *updated_node = malloc(sizeof(listint_t));
 
 if (updated_node == NULL)
 {
-return (NULL) ;
+return (NULL);
 }
 updated_node->n = n;
 updated_node->next = *head;
