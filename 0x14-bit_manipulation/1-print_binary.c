@@ -17,7 +17,7 @@ if (n == 0)
 _putchar('0');
 return;
 }
-for (i = s-1; i >= 0; i -- )
+for (i = s - 1; i >= 0; i --)
 {
 if ((n >> i) & 1)
 {
