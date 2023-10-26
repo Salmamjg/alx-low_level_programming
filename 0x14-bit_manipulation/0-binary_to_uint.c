@@ -33,5 +33,9 @@ return (0);
 }
 i++;
 }
+if(b[i] != '\0')
+{
+return (0);
+}
 return (x);
 }
