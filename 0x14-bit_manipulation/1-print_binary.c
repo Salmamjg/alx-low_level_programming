@@ -12,6 +12,7 @@ void print_binary(unsigned long int n)
 {
 int i;
 int s = sizeof(n) * 8;
+int leading_zeros = 1;
 if (n == 0)
 {
 _putchar('0');
@@ -22,10 +23,11 @@ for (i = s - 1; i >= 0; i--)
 if ((n >> i) & 1)
 {
 _putchar('1');
+leading_zeros = 0;
 }
-else
+else if (!leading_zeros)
 {
-putchar('0');
+_putchar('0');
 }
 }
 }
