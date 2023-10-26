@@ -19,6 +19,10 @@ return (0);
 }
 while (b[i] != '\0')
 {
+if (b[i] != '0' && b[i] != '1')
+{
+return (0);
+}
 if (b[i] == '0')
 {
 x <<= 1;
@@ -32,10 +36,6 @@ else
 return (0);
 }
 i++;
-}
-if (b[i] != '\0')
-{
-return (0);
 }
 return (x);
 }
