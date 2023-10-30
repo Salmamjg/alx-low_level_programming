@@ -7,8 +7,8 @@
  * read_textfile - function that reads and prints the content of a file.
  * @filename: the name of the file to read.
  * @letters: the number of letters to read and print.
- * 
- *Return: the actual number of letters read and printed, or 0 if it failed. 
+ *
+ *Return: the actual number of letters read and printed, or 0 if it failed.
 */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -16,9 +16,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 int f_desc;
 char *table = malloc(sizeof(char) * (letters));
-ssize_t b_read ;
-ssize_t b_written ;
-
+ssize_t b_read;
+ssize_t b_written;
 
 if (filename == NULL)
 {
