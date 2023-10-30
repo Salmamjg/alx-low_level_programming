@@ -6,7 +6,8 @@
 #include "main.h"
 
 /**
- * create_file - function that creates a file with specified content and permissions
+ * create_file - function that creates a file
+ * with specified content and permissions 
  * @filename: the name of the file to create.
  * @text_content: NULL terminated string to write to write to the file.
  *
@@ -21,17 +22,17 @@ if (filename == NULL)
 return (-1);
 }
 
-if(fd == -1)
+if (fd == -1)
 {
 return (-1);
 }
 
 if (text_content != NULL)
 {
-ssize_t written = write(fd, text_content,strlen(text_content));
+ssize_t written = write(fd, text_content, strlen(text_content));
 close(fd);
 
-if(written == -1)
+if (written == -1)
 return (-1);
 }
 return (1);
