@@ -48,5 +48,5 @@ if (b_read == -1 || b_written == -1 || b_written != b_read)
 {
 return (0);
 }
-return b_read;
+return (b_read);
 }
