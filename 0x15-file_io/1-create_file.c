@@ -7,7 +7,7 @@
 
 /**
  * create_file - function that creates a file
- * with specified content and permissions 
+ * with specified content and permissions
  * @filename: the name of the file to create.
  * @text_content: NULL terminated string to write to write to the file.
  *
