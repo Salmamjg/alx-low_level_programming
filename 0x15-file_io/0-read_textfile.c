@@ -28,6 +28,7 @@ f_desc = open(filename, O_RDONLY);
 
 if (f_desc == -1)
 {
+free(table);
 return (0);
 }
 
@@ -41,5 +42,11 @@ b_written = write(STDOUT_FILENO, table, b_read);
 
 close(f_desc);
 free(table);
-return (b_written);
+
+
+if (b_read == -1 || b_written == -1 || b_written != b_read)
+{
+return (0);
+}
+return b_read;
 }
