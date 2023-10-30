@@ -14,19 +14,46 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buf;
-	ssize_t fd;
-	ssize_t w;
-	ssize_t t;
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	buf = malloc(sizeof(char) * letters);
-	t = read(fd, buf, letters);
-	w = write(STDOUT_FILENO, buf, t);
+int f_desc;
+char *table = malloc(sizeof(char) * (letters));
+ssize_t b_read;
+ssize_t b_written;
 
-	free(buf);
-	close(fd);
-	return (w);
+if (filename == NULL)
+{
+return (0);
+}
+
+f_desc = open(filename, O_RDONLY);
+
+if (f_desc == -1)
+{
+free(table);
+return (0);
+}
+
+if (!table)
+{
+return (0);
+}
+
+b_read = read(f_desc, table, letters);
+if (b_read == -1)
+{
+free(table);
+close(f_desc);
+return (0);
+}
+b_written = write(STDOUT_FILENO, table, b_read);
+
+close(f_desc);
+free(table);
+
+if (b_written == -1 || b_written != b_read)
+{
+return (0);
+}
+
+return (b_read);
 }
