@@ -9,30 +9,25 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int f_desc;
-char *table = malloc(sizeof(char) * (letters));
-ssize_t b_read;
-ssize_t b_written = write(STDOUT_FILENO, table, b_read);
-if (filename == NULL)
+int f_desc = open(filename, O_RDONLY);
+if(!filename)
 return (0);
-f_desc = open(filename, O_RDONLY);
-if (f_desc == -1)
+if(f_desc == -1)
+return (0);
+char *table = malloc(letters);
+if (!table)
 {
-free(table);
+close(f_desc);
 return (0);
 }
-if (!table)
-return (0);
-b_read = read(f_desc, table, letters);
+ssize_t b_read = read(f_desc, table, letters);
+close(f_desc);
 if (b_read == -1)
 {
-free(table);
-close(f_desc);
+free (table);
 return (0);
 }
-close(f_desc);
+ssize_t b_write = write(STDOUT_FILENO, table, b_read);
 free(table);
-if (b_written == -1 || b_written != b_read)
-return (0);
-return (b_read);
+return (b_write == -1 || b_write != b_read ? 0 : b_read);
 }
