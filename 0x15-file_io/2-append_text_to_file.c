@@ -11,8 +11,9 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-int fd = open(filename, O_WRONLY | O_APPEND);
-
+int fd = -1;
+int text_length =0;
+int w;
 if (filename == NULL)
 {
 return (-1);
@@ -23,15 +24,16 @@ return (-1);
 
 if (text_content != NULL)
 {
-ssize_t w = write(fd, text_content, strlen(text_content));
-close(fd);
+ while (text_content[text_length])
+ text_length++;
+}
 
-if (w == -1)
+fd = open(filename, O_WRONLY | O_APPEND);
+w = write(fd, text_content, text_length);
+
+if (fd == -1 || w == -1)
 return (-1);
-}
-else
-{
+
 close(fd);
-}
 return (1);
 }
