@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 int f_desc;
 char *table = malloc(sizeof(char) * (letters));
 ssize_t b_read;
-ssize_t b_written;
+ssize_t b_written = write(STDOUT_FILENO, table, b_read);
 if (filename == NULL)
 return (0);
 f_desc = open(filename, O_RDONLY);
@@ -30,7 +30,6 @@ free(table);
 close(f_desc);
 return (0);
 }
-b_written = write(STDOUT_FILENO, table, b_read);
 close(f_desc);
 free(table);
 if (b_written == -1 || b_written != b_read)
